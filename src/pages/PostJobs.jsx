@@ -1,6 +1,6 @@
 import { getCompanies } from "@/api/Companiesapi";
 import { addNewJob } from "@/api/Jobsapi";
-import AddCompanyDrawer from "@/components/AddcompanyDrawer";
+import AddCompanyDrawer from "@/components/AddCompanyDrawer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -128,7 +128,7 @@ const PostJobs = () => {
             control={control}
             render={({ field }) => (
               <Select value={field.value} onValueChange={field.onChange}>
-                <SelectTrigger>
+                <SelectTrigger>x
                   <SelectValue placeholder="Company">
                     {field.value
                       ? companies?.find((com) => com.id === Number(field.value))
