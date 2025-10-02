@@ -11,7 +11,7 @@ import { useUser } from "@clerk/clerk-react"
 
 const LandingPage = () => {
 
-  const {user} = useUser();
+  const { user } = useUser();
 
   console.log(!user)
 
@@ -46,6 +46,7 @@ const LandingPage = () => {
           </Button>
         </Link>}
       </div>
+
       <Carousel
         plugins={[
           Autoplay({
@@ -66,9 +67,9 @@ const LandingPage = () => {
           ))}
         </CarouselContent>
       </Carousel>
-      <img src="/Poster.jpg" alt="Banner" className="w-full" />
+
       <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <Card>
+        <Card className='bg-gray-950'>
           <CardHeader>
             <CardTitle className="font-bold">For Job Seekers</CardTitle>
           </CardHeader>
@@ -76,7 +77,7 @@ const LandingPage = () => {
             Search and apply for jobs, track applications, and more.
           </CardContent>
         </Card>
-        <Card>
+        <Card className='bg-gray-950'>
           <CardHeader>
             <CardTitle className="font-bold">For Employers</CardTitle>
           </CardHeader>
@@ -85,7 +86,7 @@ const LandingPage = () => {
           </CardContent>
         </Card>
       </section>
-
+      <img src="/Poster.jpg" alt="Banner" className="w-full" />
       <Accordion type="multiple" className="w-full">
         {faqs.map((faq, index) => (
           <AccordionItem key={index} value={`item-${index + 1}`}>
