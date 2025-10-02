@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { Boxes, BriefcaseBusiness, Download, School } from "lucide-react";
 import {
   Card,
@@ -13,7 +12,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "./ui/select";   
+} from "./ui/select";
 import useFetch from "@/hooks/use-fetch";
 import { BarLoader } from "react-spinners";
 import { updateApplicationStatus } from "@/api/applicationapi";

@@ -110,14 +110,6 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
-/* @layer utilities {
-  .gradient {
-    @apply bg-gradient-to-br from-gray-500 via-gray-200 to-white;
-  }
-  .gradient-title {
-    @apply gradient text-transparent bg-clip-text;
-  }
-} */
 
 .wmde-markdown ul {
   list-style-type: disc;
@@ -130,9 +122,7 @@
 }
 
 .w-md-editor-toolbar{
-  background-color: rgb(3, 2, 19) !important;
-  /* color: white !important; */
-  
+  background-color: rgb(3, 2, 19) !important;  
 }
 
 

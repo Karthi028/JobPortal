@@ -8,7 +8,7 @@ const Header = () => {
 
     const [showSignin, setshowSignin] = useState(false);
     const [search, setsearch] = useSearchParams();
-    const{user} = useUser();
+    const { user } = useUser();
 
     useEffect(() => {
         if (search.get('sign-in')) {
@@ -34,10 +34,10 @@ const Header = () => {
                 </SignedOut>
                 <SignedIn>
                     {user?.unsafeMetadata?.role === 'recruiter' && <Link to={'/post-jobs'}>
-                    <Button variant={"red"} className={"rounded-full ml-1"}>
-                        <PenBox size={20} className="mr-1" />
-                        Post a Job
-                    </Button>
+                        <Button variant={"red"} className={"rounded-full ml-1"}>
+                            <PenBox size={20} className="mr-1" />
+                            Post a Job
+                        </Button>
                     </Link>}
                     <UserButton appearance={{
                         elements: {

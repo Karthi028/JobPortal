@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/select";
 import { ApplyJobDrawer } from "@/components/applyJobs";
 import useFetch from "@/hooks/use-fetch";
-import { getSingleJob, updateHiringStatus} from "@/api/Jobsapi";
+import { getSingleJob, updateHiringStatus } from "@/api/Jobsapi";
 import { useParams } from "react-router";
 import ApplicationCard from "@/components/ApplicationCard";
 
