@@ -6,9 +6,15 @@ import companies from '../data/companies.json'
 import faqs from '../data/faqs.json'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { useUser } from "@clerk/clerk-react"
 
 
 const LandingPage = () => {
+
+  const {user} = useUser();
+
+  console.log(!user)
+
   return (
     <main className="flex flex-col gap-7 sm:gap-15 py-2 sm:py-10">
       <section className="text-center">
@@ -34,12 +40,11 @@ const LandingPage = () => {
             Find Jobs
           </Button>
         </Link>
-        <Link to={"/post-jobs"}>
+        {(!user || user?.unsafeMetadata?.role == 'recruiter') && <Link to={"/post-jobs"}>
           <Button variant={"red"} size={"xl"}>
             Post Jobs
           </Button>
-        </Link>
-
+        </Link>}
       </div>
       <Carousel
         plugins={[
